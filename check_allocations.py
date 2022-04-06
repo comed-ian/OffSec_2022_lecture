@@ -120,8 +120,13 @@ def check_allocations(bv: binaryninja.BinaryViewType):
 
     # check any "wrapper" functions for variable length arguments passed to our functions, e.g.:
     '''
+        x = x + 1;
+        malloc_wrapper(x)
+        
+        ...
+
         malloc_wrapper(int x) {
-            x = x = 1;
+            int y = 1; // irrelevant
             return malloc(x);
         }
     '''
