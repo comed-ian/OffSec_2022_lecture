@@ -1,7 +1,7 @@
 /**
  * @name variable-len-malloc
  * @id cpp/variable-len-malloc
- * @description identify variable length malloc calls
+ * @description identify malloc calls with + or * expressions in allocation
  * @precision high
  * @problem.severity warning
  * @kind problem
@@ -18,5 +18,5 @@ class MallocCall extends FunctionCall
 }
 
 from MallocCall malloc
-where malloc.getAllocatedSize() instanceof BinaryArithmeticOperation
-select malloc, "Check variable-length malloc"
+where malloc.getAllocatedSize() instanceof AddExpr or malloc.getAllocatedSize() instanceof MulExpr
+select malloc, "Potential Malloc Overflow: "
