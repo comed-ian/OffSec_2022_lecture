@@ -7,3 +7,8 @@ Some useful links are below:
 * [CVE Details](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6543)
 * [Source Code pre-patch](https://github.com/bminor/binutils-gdb/tree/219d1afa89d0d53ca93a684cac341f16470f3ca0)
 * [Patch Diff](https://github.com/bminor/binutils-gdb/commit/f2023ce7e8d70b0155cc6206c901e185260918f0)
+
+Tools used in the demos: 
+* [CodeQL](https://codeql.github.com/)
+* [Binary Ninja](binary.ninja) 
+* [Frida](https://frida.re/)
